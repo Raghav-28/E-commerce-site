@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Details</title>
+    <style>
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#rudrakash" onclick="showSection('rudrakash')">Rudrakash</a></li>
+            <li><a href="#sphatik" onclick="showSection('sphatik')">Sphatik</a></li>
+            <!-- Add more navigation items for other sections as needed -->
+        </ul>
+    </nav>
+    
+    <section id="rudrakash" class="content-section ">
+        <h2>Rudrakash Section</h2>
+        <div id="rudrakash-details">
+            <!-- Details related to Rudrakash -->
+            <h3>Black Rudrakash Mala</h3>
+            <p>
+                The Black Rudraksha Mala is a sacred rosary made from black rudraksha beads, renowned for their spiritual significance and healing properties.
+            </p>
+        </div>
+    </section>
+    
+    <section id="sphatik" class="content-section ">
+        <h2>Sphatik Section</h2>
+        <div id="sphatik-details">
+            <!-- Details related to Sphatik -->
+            <h3>Sphatik Mala</h3>
+            <p>
+                The Sphatik Mala is a crystal rosary known for its purity and spiritual benefits.
+            </p>
+        </div>
+    </section>
+
+    <script>
+        function showSection(sectionId) {
+            // Hide all sections
+            var sections = document.querySelectorAll('.content-section');
+            sections.forEach(function(section) {
+                section.classList.add('hidden');
+            });
+
+            // Show the selected section
+            var selectedSection = document.getElementById(sectionId);
+            selectedSection.classList.remove('hidden');
+        }
+    </script>
+</body>
+</html>
