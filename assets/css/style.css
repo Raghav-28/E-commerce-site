@@ -61,7 +61,7 @@ h6 {
 # Header
 --------------------------------------------------------------*/
 #header {
-  background: #d9232d;
+  background: #dd313a;
   transition: all 0.5s;
   z-index: 997;
   padding: 20px 0;
@@ -569,12 +569,32 @@ section {
   color: black;
   margin-top: 200px;
 }
+@media only screen and (max-width: 1024px) {
+  .intropara {
+    /* Adjustments for laptop screens */
+    margin-top: 150px;
+    font-size: 20px;
+  }
+}
+
+/* Media query for screens smaller than 768px (typical for tablets and phones) */
+@media only screen and (max-width: 768px) {
+  .intropara {
+    /* Adjustments for smaller screens */
+    margin-top: 100px;
+    font-size: 18px;
+  }
+  #hero .container {
+    text-align: center;
+    margin-top: 224px;
+}
+}
 /*--------------------------------------------------------------
 # Breadcrumbs
 --------------------------------------------------------------*/
 .breadcrumbs {
   padding: 18px 0;
-  background: #f8f9fa;
+  background: #d6d7d8;
   min-height: 40px;
   margin-top: 80px;
 }
@@ -615,6 +635,7 @@ section {
   }
 
   .breadcrumbs h2 {
+    margin-top: 16px;
     margin-bottom: 10px;
   }
 
@@ -1321,13 +1342,48 @@ section {
   display: flex;
 }
 .footer-img{
-  width: 300px;
+  width: 400px;
   height: 200px;
+  
 }
 
 .aboutimg{
-  height: 400px;
-  width: 1200px;
+  height: 350px;
+  width: 1100px;
+}
+.aboutimg2{
+  height: 350px;
+  width: 400px;
+  border: 2px solid white;
+  border-radius: 12px;
+  margin: 6px 6px;
+  padding: 4px 4px;
+}
+.aboutintro{
+  margin: 2px;
+  margin-top: 16px;
+  
+
+}
+.abouticon{
+  display: flex;
+    margin: 6px 6px;
+    height: 30px;
+    width: 150px;
+}
+.abouticon a{
+  font-size: 18px;
+  display: inline-block;
+  background: rgba(128, 128, 128, 0.253);
+  color: rgb(221, 9, 44);
+  line-height: 1;
+  padding: 8px 0;
+  margin-right: 4px;
+  border-radius: 4px;
+  text-align: center;
+  width: 36px;
+  height: 36px;
+  transition: 0.3s;
 }
 .sizeimg{
   height: 400px;
