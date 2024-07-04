@@ -67,3 +67,17 @@ form button:hover {
 .review .rating {
     color: #f39c12;
 }
+.review-item {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.review-item button {
+    margin-top: 10px;
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+}

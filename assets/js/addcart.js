@@ -1,28 +1,28 @@
 const product = [
     {
         id: 0,
-        image: 'assets/img/portfolio/bluestonebracelet.jpeg',
+        image: 'assets/img/portfolio/onemukhi.webp',
         title: 'Raghav Bhaiya',
         price: 120,
         category: 'beads',
     },
     {
         id: 1,
-        image: 'assets/img/portfolio/brownstonemala.jpeg',
+        image: 'assets/img/portfolio/twomukhi.jpg',
         title: 'Raghav Bhaiya',
         price: 130,
         category: 'rudrakshmala',
     },
     {
         id: 2,
-        image: 'assets/img/portfolio/rudrakshmala3.jpeg',
+        image: 'assets/img/portfolio/threemukhi.webp',
         title: 'Raghav Bhaiya',
         price: 180,
         category: 'rudrakshmala',
     },
     {
         id: 3,
-        image: 'assets/img/portfolio/sphatikmala5.jpeg',
+        image: 'assets/img/portfolio/fourmukhi.webp',
         title: 'Raghav Bhaiya',
         price: 120,
         category: 'sphatikmala',
@@ -100,16 +100,20 @@ function displayProducts(products) {
 }
 
 function addtocart(a) {
-    cart.push({ ...categories[a] });
+    cart.push({ ...product[a] }); // Use product array instead of categories
+    localStorage.setItem('cart', JSON.stringify(cart)); // Store cart in localStorage
     displaycart();
 }
 
+
 function delElement(a) {
     cart.splice(a, 1);
+    localStorage.setItem('cart', JSON.stringify(cart));
     displaycart();
 }
 
 function displaycart() {
+    cart = JSON.parse(localStorage.getItem('cart')) || [];
     let j = 0;
     let total = 0;
     document.getElementById("count").innerHTML = cart.length;

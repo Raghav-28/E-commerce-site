@@ -24,6 +24,8 @@
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/review.css">
+  <link rel="stylesheet" href="./assets/css/bill.css">
 
   <style>
     .map-container {
@@ -49,22 +51,28 @@
   <header id="header" class="fixed-top d-flex align-items-center">
     <div class="container d-flex align-items-center">
 
-      <h1 class="logo me-auto"><a href="index.html">Nepal Rudraksh Emporium</a></h1>
+      <h1 class="logo me-auto"><a href="index.html">Nepal Rudrakash Emporium</a></h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a> -->
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="portfolio.html">Items</a></li>
-          <li><a href="contact.html" class="active">Contact</a></li>
-          <li><a href="cart.html" >Cart</a></li>
+          <li><a href="index.html" >Home</a></li>
 
+          <li><a href="about.html" >About</a></li>
+          <li><a href="portfolio.html" >Items</a></li>
+          <li><a href="contact.html" class="active" >Contact</a></li>
+          <li><a href="portfolio-details.html" >Info</a></li>
+          <li><a href="cart.html" >Cart</a></li>
+          <li><a href="b.ill.html" >Bill</a></li>
         </ul>
+        <div class="cart"><i class="bi bi-cart"></i><p id="count">0</p></div>
+                
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
 
     </div>
-  </header><!-- End Header -->
+  </header><!-- End Header --> End Header -->
 
   <main id="main">
 
@@ -241,6 +249,12 @@
         window.open(url , '_blank').focus();
       }
     </script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+          const cart = JSON.parse(localStorage.getItem('cart')) || [];
+          document.getElementById('count').textContent = cart.length;
+      });
+      </script>
 </body>
 
 </html>

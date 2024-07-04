@@ -1055,6 +1055,7 @@ section {
   /* background: #edeff1; */
   display: flex;
   justify-content: center;
+  margin: 3px 3px;
   align-items: center;
   border-radius: 50px;
   transition: all 0.3s ease-in-out;
