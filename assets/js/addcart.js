@@ -363,20 +363,21 @@ document.addEventListener('DOMContentLoaded', () => {
             var { image, title, price, id } = item;
             return (
                 `<div class='box'>
-                    <div class='img-box'>
-                        <img class='images' src='${image}'></img>
-                    </div>
-                    <div class='bottom'>
-                        <p>${title}</p>
-                        <h2>$ ${price}.00</h2>` +
-                `<button>
-                    <a href="portfolio-details.html#${id}" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details">
-                        Details
-                    </a>
-                </button>` +
-                `
-                    </div>
-                </div>`
+    <div class='img-box'>
+      <img class='images' src='${image}' alt='Image'>
+    </div>
+    <div class='bottom'>
+      <p>${title}</p>
+      <h2>$${price}.00</h2>
+      <a href="portfolio-details.html#${id}" class="a-btn" data-glightbox="type: external" title="Portfolio Details">
+        <button class= "a-btn">Details</button>
+      </a>
+    </div>
+  </div>
+`
+
+                // Assuming you have a container element to append this content
+
             );
         }).join('');
     }
@@ -393,34 +394,34 @@ document.addEventListener('DOMContentLoaded', () => {
         displaycart();
     }
 
-    function displaycart() {
-        cart = JSON.parse(localStorage.getItem('cart')) || [];
-        let j = 0;
-        let total = 0;
-        document.getElementById("count").innerHTML = cart.length;
-        if (cart.length == 0) {
-            document.getElementById('cardItem').innerHTML = "Your Cart Is Empty";
-            document.getElementById("total").innerHTML = "$ " + 0 + ".00";
-        } else {
-            document.getElementById('cardItem').innerHTML = cart.map((item) => {
-                var { image, title, price } = item;
-                total += price;
-                document.getElementById("total").innerHTML = "$ " + total + ".00";
-                return (
-                    `<div class='cart-item'>
-                        <div class='row-img'>
-                            <img class='rowing' src='${image}'></img>
-                        </div>
-                        <p style='font-size:12px'>${title}</p>
-                        <h2 style='font-size:15px'>$ ${price}.00</h2>` +
-                    `<i class='bi bi-trash' onclick='delElement(${j++})'></i></div>`
-                );
-            }).join('');
-        }
-    }
+    // function displaycart() {
+    //     cart = JSON.parse(localStorage.getItem('cart')) || [];
+    //     let j = 0;
+    //     let total = 0;
+    //     document.getElementById("count").innerHTML = cart.length;
+    //     if (cart.length == 0) {
+    //         document.getElementById('cardItem').innerHTML = "Your Cart Is Empty";
+    //         document.getElementById("total").innerHTML = "$ " + 0 + ".00";
+    //     } else {
+    //         document.getElementById('cardItem').innerHTML = cart.map((item) => {
+    //             var { image, title, price } = item;
+    //             total += price;
+    //             document.getElementById("total").innerHTML = "$ " + total + ".00";
+    //             return (
+    //                 `<div class='cart-item'>
+    //                     <div class='row-img'>
+    //                         <img class='rowing' src='${image}'></img>
+    //                     </div>
+    //                     <p style='font-size:12px'>${title}</p>
+    //                     <h2 style='font-size:15px'>$ ${price}.00</h2>` +
+    //                 `<i class='bi bi-trash' onclick='delElement(${j++})'></i></div>`
+    //             );
+    //         }).join('');
+    //     }
+    // }
 
     displayProducts(product);
-    displaycart();
+    // displaycart();
 
     window.addtocart = addtocart;
     window.delElement = delElement;

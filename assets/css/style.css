@@ -1554,3 +1554,12 @@ section {
   background-color: #d9232d;
   color: black;
 }
+.a-btn{
+  height: 32px;
+  width: 142px;
+  margin: 2px 2px ;
+  padding: 2px 2px;
+  align-items: center;
+  justify-content: space-between;
+  /* margin-bottom: 10px; */
+}
