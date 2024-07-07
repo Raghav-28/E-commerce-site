@@ -1,42 +1,42 @@
 const product = [
     {
         id: 'onemukhi',
-        image: 'assets/img/portfolio/onemukhi.webp',
+        image: 'assets/img/portfolio/Rudrakashbeads/onemukhi.webp',
         title: 'Raghav Bhaiya',
         price: 120,
         category: 'beads',
     },
     {
         id: 'twomukhi',
-        image: 'assets/img/portfolio/twomukhi.jpg',
+        image: 'assets/img/portfolio/Rudrakashbeads/twomukhi.jpg',
         title: 'Raghav Bhaiya',
         price: 130,
         category: 'rudrakshmala',
     },
     {
         id: 'threemukhi',
-        image: 'assets/img/portfolio/threemukhi.webp',
+        image: 'assets/img/portfolio/Rudrakashbeads/threemukhi.webp',
         title: 'Raghav Bhaiya',
         price: 180,
         category: 'rudrakshmala',
     },
     {
         id: 3,
-        image: 'assets/img/portfolio/fourmukhi.webp',
+        image: 'assets/img/portfolio/Rudrakashbeads/fourmukhi.webp',
         title: 'Raghav Bhaiya',
         price: 120,
         category: 'sphatikmala',
     },
     {
         id: 4,
-        image: 'assets/img/portfolio/sphatikmala3.jpeg',
+        image: 'assets/img/portfolio/Sphatikmala/sphatikmala3.jpeg',
         title: 'Raghav Bhaiya',
         price: 120,
         category: 'sphatikmala',
     },
     {
         id: 5,
-        image: 'assets/img/portfolio/sphatikmala3.jpeg',
+        image: 'assets/img/portfolio/Sphatikmala/sphatikmala3.jpeg',
         title: 'Raghav Bhaiya',
         price: 120,
         category: 'sphatikmala',
@@ -374,7 +374,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         Details
                     </a>
                 </button>` +
-                `<button onclick='addtocart(${i++})'>Add to Cart</button>
+                `
                     </div>
                 </div>`
             );
