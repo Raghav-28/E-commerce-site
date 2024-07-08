@@ -7,7 +7,7 @@ body {
 
 a {
   text-decoration: none;
-  color: #d9232d;
+  color: white;
 }
 
 a:hover {
@@ -86,7 +86,7 @@ h6 {
 }
 
 #header .logo a {
-  color: black;
+  color: white;
   font-size: 28px;
 }
 
@@ -125,7 +125,7 @@ h6 {
   font-family: "Poppins", sans-serif;
   font-size: 20px;
   font-weight: 500;
-  color: black;
+  color: white;
   white-space: nowrap;
   transition: 0.3s;
 }
