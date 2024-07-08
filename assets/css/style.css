@@ -1254,6 +1254,7 @@ section {
   color: #fff;
   font-size: 14px;
   width: 100%;
+  margin-top: 12px;
 }
 
 #footer .footer-top {
@@ -1561,5 +1562,6 @@ section {
   padding: 2px 2px;
   align-items: center;
   justify-content: space-between;
+  /* background-color: #FF6500; */
   /* margin-bottom: 10px; */
 }

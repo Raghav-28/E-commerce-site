@@ -139,9 +139,24 @@
                   <input type="phonenumber" class="form-control number" name="phone" id="phone" placeholder="Your Contact" required>
                 </div>
               </div>
-              <div class="form-group mt-3">
+              <!-- <div class="form-group mt-3">
                 <input type="text" class="form-control productname" name="subject" id="subject" placeholder="Product Name" required>
-              </div>
+              </div> -->
+              <div class="form-group mt-3">
+                <select class="form-control" name="category" id="category" required>
+                    <option value="">Select Category</option>
+                    <option value="RudrakshMala">Rudraksh Mala</option>
+                    <option value="Beads">Beads</option>
+                    <option value="SphatikMala">Sphatik Mala</option>
+                    <option value="Others">Others</option>
+                </select>
+            </div>
+            <div class="form-group mt-3">
+                <select class="form-control" name="subcategory" id="subcategory" required>
+                    <option value="">Select Subcategory</option>
+                </select>
+            </div>
+            
               <div class="form-group mt-3">
                 <textarea class="form-control address" name="message" rows="5" placeholder="Address" required></textarea>
               </div>
@@ -233,13 +248,15 @@
 
         var name = document.querySelector('.name').value;
         var number = document.querySelector('.number').value;
-        var productname = document.querySelector('.productname').value;
+        var category = document.querySelector('.category').value;
+        var subcategory = document.querySelector('.subcategory').value;
         var address = document.querySelector('.address').value;
 
         var url = "https://wa.me/" +phoneNumber + "?text="
         +"*Name :* " +name + "%0a"
         +"*PhoneNumber :* " +number + "%0a"
-        +"*ProductName :* " +productname + "%0a"
+        +"*category :* " +category + "%0a"
+        +"*subcategory :* " +subcategory+ "%0a"
         +"*Address :* " +address + "%0a%0a"
         +"Example of message to send on whatsapp"
 
@@ -249,10 +266,67 @@
     </script>
     <script>
       document.addEventListener('DOMContentLoaded', function() {
-          const cart = JSON.parse(localStorage.getItem('cart')) || [];
-          document.getElementById('count').textContent = cart.length;
-      });
-      </script>
+        const categorySelect = document.getElementById('category');
+        const subcategorySelect = document.getElementById('subcategory');
+    
+        const subcategories = {
+            RudrakshMala: [
+                { value: 'RudrakshMala1', text: 'Rudraksh Mala 1' },
+                { value: 'RudrakshMala2', text: 'Rudraksh Mala 2' },
+                { value: 'RudrakshMala3', text: 'Rudraksh Mala 3' }
+            ],
+            Beads: [
+                { value: 'OneMukhi', text: 'One Mukhi' },
+                { value: 'Beads2', text: 'Beads Subcategory 2' },
+                { value: 'Beads3', text: 'Beads Subcategory 3' },
+                { value: 'Beads4', text: 'Beads Subcategory 4' },
+                { value: 'Beads5', text: 'Beads Subcategory 5' },
+                { value: 'Beads6', text: 'Beads Subcategory 6' },
+                { value: 'Beads7', text: 'Beads Subcategory 7' },
+                { value: 'Beads8', text: 'Beads Subcategory 8' },
+                { value: 'Beads9', text: 'Beads Subcategory 9' },
+                { value: 'Beads10', text: 'Beads Subcategory 10' },
+                { value: 'Beads11', text: 'Beads Subcategory 11' },
+                { value: 'Beads12', text: 'Beads Subcategory 12' },
+                { value: 'Beads13', text: 'Beads Subcategory 13' },
+                { value: 'Beads14', text: 'Beads Subcategory 14' }
+            ],
+            SphatikMala: [
+                { value: 'DiamondCut', text: 'Diamond Cut' },
+                { value: 'SphatikMala2', text: 'Sphatik Mala Subcategory 2' },
+                { value: 'SphatikMala3', text: 'Sphatik Mala Subcategory 3' },
+                { value: 'SphatikMala4', text: 'Sphatik Mala Subcategory 4' },
+                { value: 'SphatikMala5', text: 'Sphatik Mala Subcategory 5' },
+                { value: 'SphatikMala6', text: 'Sphatik Mala Subcategory 6' }
+            ],
+            Others: [
+                { value: 'Others1', text: 'Others Subcategory 1' },
+                { value: 'Others2', text: 'Others Subcategory 2' },
+                { value: 'Others3', text: 'Others Subcategory 3' },
+                { value: 'Others4', text: 'Others Subcategory 4' },
+                { value: 'Others5', text: 'Others Subcategory 5' },
+                { value: 'Others6', text: 'Others Subcategory 6' }
+            ]
+        };
+    
+        categorySelect.addEventListener('change', function() {
+            const selectedCategory = this.value;
+            const options = subcategories[selectedCategory] || [];
+    
+            // Clear current subcategory options
+            subcategorySelect.innerHTML = '<option value="">Select Subcategory</option>';
+    
+            // Populate new subcategory options
+            options.forEach(option => {
+                const opt = document.createElement('option');
+                opt.value = option.value;
+                opt.text = option.text;
+                subcategorySelect.appendChild(opt);
+            });
+        });
+    });
+    
+    </script>
 </body>
 
 </html>
