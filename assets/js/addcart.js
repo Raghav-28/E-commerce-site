@@ -65,14 +65,14 @@ const product = [
     {
         id: 9,
         image: 'assets/img/portfolio/others/blackmixstonebracelet.jpeg',
-        title: 'Sulemain Hakik',
+        title: 'Sulemani Hakik',
         price: 130,
         category: 'others',
     },
     {
         id: 10,
         image: 'assets/img/portfolio/others/bluestonebracelet.jpeg',
-        title: 'Irani Firoza / ',
+        title: 'Irani Firoza ',
         price: 180,
         category: 'others',
     },

@@ -871,8 +871,36 @@ section {
   transform: scale(1.2);
 
 }
+.new-wrap {
+  position: relative;
+  overflow: hidden;
+}
 
-.portfolio .portfolio-wrap:hover .portfolio-info {
+.new-wrap img {
+  display: block;
+  width: 100%;
+}
+
+.new-wrap .title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white; /* Adjust color as needed */
+  background-color: rgba(0, 0, 0, 0.5); /* Optional: Add a background color with transparency */
+  padding: 10px; /* Optional: Add some padding for better readability */
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.new-wrap:hover .title {
+  opacity: 1;
+  font-size: 27px;
+
+}
+
+
+.portfolio .new-wrap:hover .portfolio-info {
   opacity: 1;
 }
 
@@ -880,13 +908,66 @@ section {
 /*--------------------------------------------------------------
 # Portfolio Details
 --------------------------------------------------------------*/
+.info-subbar{
+  margin-top: 110px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+
+}
+.info-subbar a:hover{
+visibility: visible !important ;
+opacity: 1;
+}
 .portfolio-details {
   padding-top: 40px;
 }
+ 
+.info-subbar a {
+  /* Initial styles for the links */
+  color: initial; /* Set the initial color */
+  text-decoration: none; /* Remove underline */
+  /* Add other styles as needed */
+  margin: 0px 6px ;
+}
 
-/* .portfolio-details .portfolio-details-slider img {
-  width: 100%;
-} */
+.info-subbar a:hover {
+  /* Reset hover effects */
+  color: white; /* Inherit the color from parent */
+  text-decoration: none; /* Ensure no underline on hover */
+  /* Remove any other hover effects */
+  background-color: #d9232d;
+  border: 1px solid red;
+  border-radius: 6px;
+}
+
+/* Additional optional styles */
+.info-subbar ul {
+  list-style-type: none; /* Remove bullet points */
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.info-subbar li {
+  margin-right: 15px; /* Spacing between items */
+}
+
+/* Define the initial styles for the link */
+.no-hover {
+  color: initial; /* Set the initial color */
+  text-decoration: none; /* Remove underline */
+  /* Add other styles as needed */
+}
+
+/* Define the hover styles for the link */
+.no-hover:hover {
+  color: inherit; /* Ensure color does not change on hover */
+  text-decoration: none; /* Ensure no underline on hover */
+  /* Remove any other hover effects */
+}
+
 
 .portfolio-details .portfolio-details-slider .swiper-pagination {
   margin-top: 20px;
@@ -919,6 +1000,11 @@ section {
 #onemukhi{
   display: flex;
   width: 100%;
+}
+.portfolio-display{
+  display: flex;
+  width: 100%;
+  margin-bottom: 22px;
 }
 .modifiedh4{
   font-size: 23px;

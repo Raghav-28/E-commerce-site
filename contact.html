@@ -242,28 +242,27 @@
   <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
-    <script>
-      function sendWhatsapp() {
-        var phoneNumber = "+919045091370";
-
-        var name = document.querySelector('.name').value;
-        var number = document.querySelector('.number').value;
-        var category = document.querySelector('.category').value;
-        var subcategory = document.querySelector('.subcategory').value;
-        var address = document.querySelector('.address').value;
-
-        var url = "https://wa.me/" +phoneNumber + "?text="
-        +"*Name :* " +name + "%0a"
-        +"*PhoneNumber :* " +number + "%0a"
-        +"*category :* " +category + "%0a"
-        +"*subcategory :* " +subcategory+ "%0a"
-        +"*Address :* " +address + "%0a%0a"
-        +"Example of message to send on whatsapp"
-
-
-        window.open(url , '_blank').focus();
-      }
-    </script>
+  <script>
+    function sendWhatsapp() {
+      var phoneNumber = "+919045091370";
+  
+      var name = document.querySelector('.name').value;
+      var number = document.querySelector('.number').value;
+      var category = document.getElementById('category').value;
+      var subcategory = document.getElementById('subcategory').value;
+      var address = document.querySelector('.address').value;
+  
+      var url = "https://wa.me/" + phoneNumber + "?text="
+        + "*Name:* " + name + "%0a"
+        + "*Phone Number:* " + number + "%0a"
+        + "*Category:* " + category + "%0a"
+        + "*Subcategory:* " + subcategory + "%0a"
+        + "*Address:* " + address + "%0a%0a";
+  
+      window.open(url, '_blank').focus();
+    }
+  </script>
+  
     <script>
       document.addEventListener('DOMContentLoaded', function() {
         const categorySelect = document.getElementById('category');
