@@ -908,41 +908,27 @@ section {
 /*--------------------------------------------------------------
 # Portfolio Details
 --------------------------------------------------------------*/
-.info-subbar{
-  margin-top: 110px;
+.info-subbar {
+  margin-top: 140px;
   display: flex;
   align-items: center;
   justify-content: center;
+}
 
-
-}
-.info-subbar a:hover{
-visibility: visible !important ;
-opacity: 1;
-}
-.portfolio-details {
-  padding-top: 40px;
-}
- 
 .info-subbar a {
-  /* Initial styles for the links */
   color: initial; /* Set the initial color */
   text-decoration: none; /* Remove underline */
-  /* Add other styles as needed */
-  margin: 0px 6px ;
+  margin: 0px 6px;
 }
 
 .info-subbar a:hover {
-  /* Reset hover effects */
   color: white; /* Inherit the color from parent */
   text-decoration: none; /* Ensure no underline on hover */
-  /* Remove any other hover effects */
   background-color: #d9232d;
   border: 1px solid red;
   border-radius: 6px;
 }
 
-/* Additional optional styles */
 .info-subbar ul {
   list-style-type: none; /* Remove bullet points */
   padding: 0;
@@ -952,6 +938,28 @@ opacity: 1;
 
 .info-subbar li {
   margin-right: 15px; /* Spacing between items */
+}
+
+/* Media query for phone sizes */
+@media (max-width: 600px) {
+  .info-subbar {
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Align items to the start */
+    margin-top: 20px; /* Adjust top margin */
+  }
+
+  .info-subbar a {
+    margin: 10px 0; /* Adjust margin for vertical alignment */
+  }
+
+  .info-subbar ul {
+    flex-direction: column; /* Stack list items vertically */
+  }
+
+  .info-subbar li {
+    margin-right: 0; /* Remove right margin */
+    margin-bottom: 10px; /* Add bottom margin for spacing */
+  }
 }
 
 /* Define the initial styles for the link */
@@ -977,7 +985,7 @@ opacity: 1;
   justify-content: center;
 }
 .imgcont{
-  width: 350px;
+  width: 300px;
   align-items: center;
   justify-content: center;
   margin: auto;
@@ -997,10 +1005,6 @@ opacity: 1;
 .portfolio-info1{
   width: 300px;
 }
-#onemukhi{
-  display: flex;
-  width: 100%;
-}
 .portfolio-display{
   display: flex;
   width: 100%;
@@ -1017,11 +1021,76 @@ opacity: 1;
   border-radius: 12px;
 
 }
-.portfolio-description1{
-  display: block;
-  margin: 6px 6px ;
-  padding: 6px 6px;
+.portfolio-details1  {
+  margin-top: 20px;
+  position: relative;
+  /* width: 300px; */
+  align-items: center;
+  justify-content: center;
 }
+.portfolio-description1 {
+  /* display: block; */
+  width: 90%;
+  /* Additional styles for desktop */
+}
+.new-info{
+  margin-left: 100px;
+    width: 100%;
+    overflow: hidden;
+}
+
+/* Media query for tablet sizes */
+@media (max-width: 768px) {
+  .portfolio-description1 {
+    padding: 8px 8px;
+    margin: 8px 8px;
+    font-size: 0.9em; /* Adjust font size for readability */
+  }
+}
+
+/* Media query for phone sizes */
+@media (max-width: 600px) {
+  .portfolio-description1 {
+    padding: 10px 10px;
+    margin: 10px 10px;
+    font-size: 0.8em; /* Adjust font size for readability */
+  }
+
+  .portfolio-description1 h2 {
+    font-size: 1.2em; /* Adjust heading size */
+  }
+
+  .portfolio-description1 p {
+    line-height: 1.4; /* Adjust line height for better readability */
+  }
+}
+
+/* Media query for very small phone sizes */
+@media (max-width: 576px) {
+  .portfolio-description1 {
+    padding: 12px 12px;
+    margin: 12px auto;
+    font-size: 0.75em; /* Further adjust font size for readability */
+    width: 90%; /* Ensure content fits within the screen */
+    box-sizing: border-box; /* Include padding in the element's total width and height */
+  }
+  .new-info{
+    margin-left: 70px;
+      /* width: 270; */
+      align-items: center;
+      text-align: left;
+      justify-content: center;
+      /* overflow: hidden; */
+  }
+  .portfolio-description1 h2 {
+    font-size: 2.1em; /* Further adjust heading size */
+  }
+
+  .portfolio-description1 p {
+    line-height: 1.5; /* Further adjust line height for better readability */
+  }
+}
+
 .portfolio-details .portfolio-info {
   padding: 30px;
   box-shadow: 0px 0 30px rgba(85, 98, 112, 0.08);
@@ -1047,6 +1116,7 @@ opacity: 1;
 
 .portfolio-details .portfolio-description {
   padding-top: 30px;
+  /* margin-left: 22px; */
 }
 
 .portfolio-details .portfolio-description h2 {
@@ -1058,14 +1128,14 @@ opacity: 1;
 .portfolio-details .portfolio-description p {
   padding: 0;
 }
-@media (max-width: 600px) {
+@media (max-width: 750px) {
   #onemukhi{
     display: block;
     width: 100%;
   }
   .portfolio-info1 {
     flex-direction: column; /* Stack items vertically on small screens */
-    align-items: flex-start; /* Align items to the start of the container */
+    align-items: center; /* Align items to the start of the container */
   }
 
   .modifiedh4 {
@@ -1084,9 +1154,11 @@ opacity: 1;
   height: 350px;
 }
 .size-of-content{
-  width: 100%;
+  width: 50%;
   margin: auto;
   text-align: left;
+  display: flex;
+  flex-direction: column;
   align-items: center;
 }
 @media (max-width: 600px) {
@@ -1121,6 +1193,12 @@ opacity: 1;
   background-color: #d9232d;
   color: white;
   padding: 8px 8px;
+}
+.info-heading{
+  margin: 24px 16px;
+  padding: 3px 3px ;
+  margin-bottom: 22px;
+  font-weight: bold;
 }
 /*--------------------------------------------------------------
 
@@ -1493,7 +1571,7 @@ opacity: 1;
   display: flex;
 }
 .footer-img{
-  width: 200px;
+  width: 400px;
   height: 250px;
   margin: auto;
 }
@@ -1624,6 +1702,10 @@ opacity: 1;
 .sizeimg1{
   height: 300px;
   width: 325px;
+}
+.swiper-slide1{
+align-self: center;
+margin: auto;
 }
 .btn-send{
   color: white;
