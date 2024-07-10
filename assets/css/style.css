@@ -953,7 +953,8 @@ section {
   }
 
   .info-subbar ul {
-    flex-direction: column; /* Stack list items vertically */
+    flex-direction: column;
+    margin-top: 100px; /* Stack list items vertically */
   }
 
   .info-subbar li {
@@ -1075,7 +1076,7 @@ section {
     box-sizing: border-box; /* Include padding in the element's total width and height */
   }
   .new-info{
-    margin-left: 70px;
+    margin-left: 60px;
       /* width: 270; */
       align-items: center;
       text-align: left;
@@ -1129,9 +1130,10 @@ section {
   padding: 0;
 }
 @media (max-width: 750px) {
-  #onemukhi{
+  .mukhi{
     display: block;
     width: 100%;
+    margin-left: 40px;
   }
   .portfolio-info1 {
     flex-direction: column; /* Stack items vertically on small screens */
@@ -1139,7 +1141,8 @@ section {
   }
 
   .modifiedh4 {
-    margin: 0 0 10px 0; /* Adjust margin for smaller screens */
+    margin: 0 0 10px 0; 
+    margin-top: 20px;/* Adjust margin for smaller screens */
   }
 }
 .size-of-img{
@@ -1196,9 +1199,31 @@ section {
 }
 .info-heading{
   margin: 24px 16px;
+  /* margin-left: 200px; */
   padding: 3px 3px ;
   margin-bottom: 22px;
   font-weight: bold;
+}
+.sizeimg1{
+  height: 300px;
+  width: 325px;
+}
+@media (max-width:600px) {
+  .info-heading{
+    margin-left: 100px;
+    font-size: 42px;
+  font-weight: bold;
+  }
+  
+}
+@media (max-width:300px) {
+  .info-heading{
+    margin-left: 60px;
+    font-size: 32px;
+  font-weight: bold;
+
+  }
+  
 }
 /*--------------------------------------------------------------
 
@@ -1699,10 +1724,7 @@ section {
   height: 400px;
   width: 400px;
 }
-.sizeimg1{
-  height: 300px;
-  width: 325px;
-}
+
 .swiper-slide1{
 align-self: center;
 margin: auto;
