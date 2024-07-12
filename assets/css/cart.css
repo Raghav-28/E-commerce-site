@@ -91,14 +91,14 @@ body {
     align-items: center;
     justify-content: space-between;
     border: 1px solid goldenrod;
-    background-color: #FF8A08;
+    background-color: #f3f0ed;
     border-radius: 5px;
     padding: 15px;
 }
 .images {
     height: 272px;
     width: 380px;
-    border: 1px solid red;
+    border: 1px solid black;
     border-radius: 22px;
     object-position: center;
 }
@@ -128,7 +128,7 @@ body {
     /* background-color: #FF6500; */
     padding: 7px 15px;
     cursor: pointer;
-    color: white;
+    color: black;
     align-items: center;
     justify-content: center;
     margin: auto;
@@ -138,12 +138,12 @@ body {
     margin: 4px;
 }
 .btn-color{
-    color: white;
+    color: black;
     font-size: 22px;
 }
 
 button:hover {
-    background-color: #FFC100;
+    background-color: #afaea9;
 }
 
 .cart-item {
@@ -151,7 +151,7 @@ button:hover {
     align-items: center;
     justify-content: space-between;
     padding: 10px;
-    background-color: white;
+    background-color: #f3f0ed;
     border-bottom: 1px solid #aaa;
     border-radius: 3px;
     margin: 10px 0;
@@ -195,13 +195,21 @@ button:hover {
     }
 
     #root {
-        width: 100%;
+        width: 90%;
         grid-template-columns: 1fr;
+        align-items: center;
+
     }
 
     .sidebar {
         width: 100%;
         margin-left: 0;
         margin-top: 20px;
+    }
+
+    .images {
+        height: 172px;
+        width: 180px;
+        object-position: center;
     }
 }
