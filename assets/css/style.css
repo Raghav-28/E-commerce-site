@@ -1064,6 +1064,15 @@ section {
   .portfolio-description1 p {
     line-height: 1.4; /* Adjust line height for better readability */
   }
+  .portfolio-details1  {
+    display: grid;
+    margin-top: 20px;
+    margin-left: 40px;
+    position: relative;
+    /* width: 300px; */
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 /* Media query for very small phone sizes */
@@ -1132,17 +1141,25 @@ section {
 @media (max-width: 750px) {
   .mukhi{
     display: block;
-    width: 100%;
-    margin-left: 30px;
+    width: 90%;
+    margin-left: 10px;
   }
   .portfolio-info1 {
     flex-direction: column; /* Stack items vertically on small screens */
     align-items: center; /* Align items to the start of the container */
   }
-
+  .portfolio-info1 ul{
+    margin: 0px;
+    padding: 4px 17px;
+    font-size: 8px;
+  }
+  .dec-size{
+    font-size: 15px;
+  }
   .modifiedh4 {
     margin: 0 0 10px 0; 
-    margin-top: 20px;/* Adjust margin for smaller screens */
+    margin-top: 20px;
+    font-size: 18px;/* Adjust margin for smaller screens */
   }
 }
 .size-of-img{
@@ -1210,16 +1227,20 @@ section {
 }
 @media (max-width:600px) {
   .info-heading{
-    margin-left: 100px;
-    font-size: 42px;
+    margin-left: 20px;
+    font-size: 32px;
   font-weight: bold;
+  }
+  .sizeimg1{
+    height: 200px;
+    width: 225px;
   }
   
 }
 @media (max-width:300px) {
   .info-heading{
-    margin-left: 60px;
-    font-size: 32px;
+    margin-left: 10px;
+    font-size: 22px;
   font-weight: bold;
 
   }
@@ -1628,10 +1649,18 @@ section {
       width: 100%; 
   }
   .footer-img{
-    width: 350px;
+    width: 300px;
     overflow: hidden;
     margin: auto;
   }
+}
+@media (max-width:300px) {
+  .footer-img{
+    width: 250px;
+    overflow: hidden;
+    margin: auto;
+  }
+  
 }
 
 .aboutimg {

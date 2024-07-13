@@ -277,7 +277,7 @@ document.addEventListener('DOMContentLoaded', () => {
     </div>
     <div class='bottom'>
       <p>${title}</p>
-        ${price ? `<h2>$${price}.00</h2>` : ''}
+        ${price ? `<h2>Rs ${price}.00</h2>` : ''}
       <a href="portfolio-details.html#${id}" class="a-btn" data-glightbox="type: external" title="Portfolio Details">
         <button class= "a-btn">Details</button>
       </a>
