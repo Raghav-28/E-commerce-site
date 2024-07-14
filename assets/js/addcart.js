@@ -198,7 +198,7 @@ const product = [
     {
         id: 28,
         image: 'assets/img/portfolio/others/whitemotimala.jpeg',
-        title: 'Raghav Bhaiya',
+        title: 'Moti Mala',
         // price: 120,
         category: 'others',
     },
