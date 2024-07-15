@@ -29,7 +29,7 @@ const product = [
     },
     {
         id: 4,
-        image: 'assets/img/portfolio/Sphatikmala/sphatikmala3.jpeg',
+        image: 'assets/img/portfolio/Sphatikmala/sphatikmala11.jpeg',
         title: 'Sphatik Mala',
         price: 1200,
         category: 'sphatikmala',
@@ -50,7 +50,7 @@ const product = [
     },
     {
         id: 7,
-        image: 'assets/img/portfolio/Rudrakshamala/Rudrakshamala10.jpeg',
+        image: 'assets/img/portfolio/Rudrakshamala/brownmala11 (1).jpeg',
         title: 'Rudraksha Mala',
         price: 600,
         category: 'Rudrakshamala',
@@ -85,7 +85,7 @@ const product = [
     },
     {
         id: 12,
-        image: 'assets/img/portfolio/others/parasshivling2.jpeg',
+        image: 'assets/img/portfolio/others/paras shivling 11.jpeg',
         title: 'Mercury Shivling',
         // price: 120,
         category: 'others',
@@ -241,6 +241,13 @@ const product = [
         id: 34,
         image: 'assets/img/portfolio/Rudrakshabeads/Gaurishankar2.webp',
         title: 'Gauri Shankar Rudraksha',
+        // price: ,
+        category: 'beads',
+    },
+    {
+        id: 35,
+        image: 'assets/img/portfolio/others/rudrakashbracelet2.jpeg',
+        title: 'Rudraksa silver Bracelet',
         // price: ,
         category: 'beads',
     },
