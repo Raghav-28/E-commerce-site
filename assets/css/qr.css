@@ -77,12 +77,20 @@
       padding: 20px;
     }
 
+    .brand-heading{
+      display: flex;
+      align-items: center;
+      margin: auto;
+      justify-content: center;
+    }
+
     .brand-name {
       font-size: 24px;
       font-weight: 600;
       color: #000;
       margin-bottom: 20px;
       text-align: center;
+      background-color: yellow;
     }
 
     .auth-badge {
